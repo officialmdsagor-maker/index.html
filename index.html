@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎁 Free 58 Bonus</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#006b1f,#003b11);
+overflow-x:hidden;
+text-align:center;
+color:#fff;
+}
+
+.container{
+max-width:420px;
+margin:auto;
+padding:20px;
+}
+
+.banner img{
+width:100%;
+border-radius:18px;
+border:3px solid gold;
+box-shadow:0 0 20px gold;
+}
+
+h1{
+margin-top:20px;
+font-size:32px;
+color:#FFD700;
+}
+
+.subtitle{
+margin-top:10px;
+font-size:18px;
+}
+
+.gift{
+font-size:90px;
+cursor:pointer;
+margin:25px 0;
+animation:bounce 1.4s infinite,
+glow 2s infinite;
+}
+
+.reward{
+display:none;
+animation:zoom .6s;
+}
+
+.money{
+font-size:72px;
+color:#FFD700;
+font-weight:bold;
+text-shadow:3px 3px red;
+margin:15px 0;
+}
+
+.claim-btn{
+
+display:inline-block;
+
+padding:18px 40px;
+
+background:linear-gradient(#ffe600,#ffb300);
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#000;
+
+box-shadow:0 0 25px gold;
+
+animation:pulse 1s infinite;
+
+margin-top:20px;
+
+}
+
+.timer{
+
+margin-top:30px;
+
+font-size:20px;
+
+}
+
+#countdown{
+
+font-size:42px;
+
+color:#ff5757;
+
+margin-top:10px;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+@keyframes glow{
+
+0%{
+
+filter:drop-shadow(0 0 5px gold);
+
+}
+
+50%{
+
+filter:drop-shadow(0 0 20px gold);
+
+}
+
+100%{
+
+filter:drop-shadow(0 0 5px gold);
+
+}
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+@keyframes zoom{
+
+from{
+
+opacity:0;
+
+transform:scale(.3);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.confetti{
+
+position:fixed;
+
+font-size:26px;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="banner">
+
+<img src="offer.png">
+
+</div>
+
+<h1>🎉 Welcome Bonus</h1>
+
+<p class="subtitle">
+
+কোনো ডিপোজিট ছাড়াই ফ্রি Bonus পান
+
+</p>
+
+<div id="giftBox" class="gift">
+
+🎁
+
+</div>
+
+<div id="reward" class="reward">
+
+<h2>অভিনন্দন!</h2>
+
+<div class="money">
+
+৳৫৮
+
+</div>
+
+<p>
+
+এখনই Claim করুন
+
+</p>
+
+<a href="https://baji999.in?refcode=aBGIiD"
+
+class="claim-btn">
+
+🎁 Claim Now
+
+</a>
+
+</div>
+
+<div class="timer">
+
+অফার শেষ হতে
+
+<div id="countdown">
+
+05:00
+
+</div>
+
+</div>
+
+  </div>
+  <script>
+
+const giftBox = document.getElementById("giftBox");
+const reward = document.getElementById("reward");
+const countdown = document.getElementById("countdown");
+
+// Gift Click
+giftBox.addEventListener("click", function(){
+
+    giftBox.style.display = "none";
+    reward.style.display = "block";
+
+    launchConfetti();
+
+});
+
+// Countdown Timer
+
+let time = 300;
+
+function updateTimer(){
+
+    let m = Math.floor(time / 60);
+    let s = time % 60;
+
+    countdown.innerHTML =
+        String(m).padStart(2,"0")
+        + ":"
+        + String(s).padStart(2,"0");
+
+    if(time > 0){
+
+        time--;
+
+    }else{
+
+        countdown.innerHTML = "Offer Expired";
+
+    }
+
+}
+
+setInterval(updateTimer,1000);
+
+updateTimer();
+
+
+// Confetti Animation
+
+function launchConfetti(){
+
+const icons = ["🎉","✨","🎁","💰","🪙"];
+
+for(let i=0;i<100;i++){
+
+const item=document.createElement("div");
+
+item.className="confetti";
+
+item.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+
+item.style.left=Math.random()*100+"vw";
+
+item.style.top="-30px";
+
+item.style.fontSize=(18+Math.random()*20)+"px";
+
+document.body.appendChild(item);
+
+let y=-30;
+
+let x=Math.random()*10-5;
+
+let rotate=Math.random()*360;
+
+const fall=setInterval(function(){
+
+y+=5;
+
+rotate+=8;
+
+item.style.top=y+"px";
+
+item.style.transform=
+"translateX("+x+"px) rotate("+rotate+"deg)";
+
+if(y>window.innerHeight){
+
+clearInterval(fall);
+
+item.remove();
+
+}
+
+},20);
+
+}
+
+}
+
+
+// Title Animation
+
+setInterval(function(){
+
+if(document.title==="🎁 Free 58 Bonus"){
+
+document.title="🔥 Claim Now";
+
+}else{
+
+document.title="🎁 Free 58 Bonus";
+
+}
+
+},1500);
+
+</script>
+
+</body>
+  </html>
